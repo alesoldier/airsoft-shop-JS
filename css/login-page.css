@@ -5,7 +5,7 @@ body{
     overflow: hidden;
 }
 
-div#forma{
+.forma{
     width: 300px;
     margin: 0 auto;
     padding-top: 40px;
@@ -24,12 +24,12 @@ div.jumbotron-fluid{
     margin: 80px auto;
 }
 
-img#img-jbt{
+.img-jbt{
     border-radius: 20px;
     float: left;
 }
 
-h1#title-j{
+.title-j{
     color: black;
 }
 
@@ -42,7 +42,7 @@ input{
     margin: 20px auto; 
 }
 
-div#content{
+.content{
     width: 900px;
     margin: 0 auto;
     display: block;
@@ -63,7 +63,7 @@ button:hover{
     background-color: azure;
 }
 
-button#btn-s{
+.btn-s{
     margin-left: 17%;
     
 }
