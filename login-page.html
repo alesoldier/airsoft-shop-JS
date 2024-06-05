@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1920px, initial-scale=1.0">
+        <link rel="stylesheet" href="css/LOGIN-css.css">
+        <title>LOGIN</title>
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="content">
+            <img id="ak" src="images/aksu.png" alt="err">
+            <img id="title" src="images/title.png" alt="err">
+            <h1>LOGIN ACCOUNT</h1>
+            <div id="forma">
+                <form action="name">
+                    <label for="fname">username</label>
+                    <input type="text" id="fname" name="username">
+                    <p id="err1"></p>
+                    <br>
+                    <label for="password">password</label>
+                    <input type="password" id="password" name="raw-password">
+                    <p id="err2"></p>
+                </form>
+                <button id="btn-l">LOGIN</button>
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <img id="img-jbt" src="images/back-jbt.jpeg" alt="srry">
+                    <h1 id="title-j">Don't have an account?</h1>
+                    <p>Don't worry, just</p>
+                    <button id="btn-s">SIGN UP</button>
+                </div>   
+            </div>
+        </div>
+
+        <script type="text/javascript">
+                
+            window.onload = function (){
+                var name;
+                var password; 
+
+                document.getElementById("btn-l").onclick = function check(){
+
+                    name = document.getElementById("fname").value;
+                    password = document.getElementById("password").value;    
+
+                    if(!name || !password){     
+                        document.getElementById("err1").innerHTML= "ERR invalid username";
+                        document.getElementById("err1").style.color= "white";
+                        document.getElementById("err2").innerHTML= "ERR wrong password";
+                        document.getElementById("err2").style.color= "white";
+                    }else{
+                        document.getElementById("err1").innerHTML= "";
+                        document.getElementById("err2").innerHTML= "";
+                        window.location.href= "home-page.html";
+                    }
+                }  
+            };
+               
+            
+            
+        </script>
+    </body>
+</html>
