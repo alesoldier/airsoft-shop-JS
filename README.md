@@ -1,2 +1,1 @@
 #airsoft-sop
-sccss
