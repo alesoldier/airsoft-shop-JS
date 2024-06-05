@@ -5,7 +5,7 @@ body{
     overflow: hidden;
 }
 
-.forma{
+.login-form{
     width: 300px;
     margin: 0 auto;
     padding-top: 40px;
@@ -42,7 +42,7 @@ input{
     margin: 20px auto; 
 }
 
-.content{
+.login-content{
     width: 900px;
     margin: 0 auto;
     display: block;
