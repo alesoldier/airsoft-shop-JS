@@ -40,22 +40,22 @@
         <script type="text/javascript">
                 
             window.onload = function (){
-                var name;
-                var password; 
 
-                document.getElementById("btn-login").onclick = function check(){
+                document.getElementById("button-login").onclick = function check(){
+
+                    var name;
+                    var password; 
+                    var input1;
 
                     name = document.getElementById("fname").value;
                     password = document.getElementById("password").value;    
+                    input1= document.getElementById("err1");
 
                     if(!name || !password){     
-                        document.getElementById("err1").innerHTML= "ERR invalid username";
-                        document.getElementById("err1").style.color= "white";
-                        document.getElementById("err2").innerHTML= "ERR wrong password";
-                        document.getElementById("err2").style.color= "white";
+                        input1.innerHTML = "Incorrect password or username ";
+                        input1.style.color = "white";
                     }else{
-                        document.getElementById("err1").innerHTML= "";
-                        document.getElementById("err2").innerHTML= "";
+                        input1.innerHTML = "";
                         window.location.href= "home-page.html";
                     }
                 }  
