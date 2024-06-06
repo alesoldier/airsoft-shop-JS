@@ -4,6 +4,6 @@
   "main": "index.js",
   "author": "Alessandro Comuzzi",
   "license": "MIT",
-  "description": "we got the default login page, the sing in button doesn't work still, but soon or later it will work",
+  "description": "it's an e-commerce airsoft shop",
   "private": true
 }

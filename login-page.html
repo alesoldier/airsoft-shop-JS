@@ -5,34 +5,37 @@
         <link rel="stylesheet" href="css/login-page.css">
         <title>LOGIN</title>
         <link rel="icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="login-container">
         <div class="login-content">
 
             <img src="images/login-page/aksu.png" alt="err">
             <img class="login-title" src="images/login-page/title.png" alt="err">
 
-            <h1>LOGIN ACCOUNT</h1>
+            <h1 class="login-subtitle">LOGIN ACCOUNT</h1>
 
             <div class="login-form">
                 <form action="name">
-                    <p id="err1"></p>
-                    <label for="fname">username</label>
-                    <input type="text" id="fname" name="username">
-                    <br>
-                    <label for="password">password</label>
-                    <input type="password" id="password" name="raw-password">
+
+                    <p class="err1"></p>
+                    <label class="label-login" for="fname">username</label>
+                    <input type="text" class="fname" name="username">
+                    
+                    <label class="label-login" for="password">password</label>
+                    <input type="password" class="password" name="raw-password">
                     
                 </form>
-                <button id="button-login">LOGIN</button>
+                <button class="button-page">LOGIN</button>
             </div>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <img class="img-jumbotron" src="images/login-page/back-jbt.jpeg" alt="sorry">
-                    <h1 class="title-jumbotron">Don't have an account?</h1>
+
+            <div class="singIn-content">
+                <div class="singIn-container">
+
+                    <img class="img-singIn" src="images/login-page/back-jbt.jpeg" alt="sorry">
+                    <h1 class="title-singIn">Don't have an account?</h1>
                     <p>Don't worry, just</p>
-                    <button class="button-singin">SIGN UP</button>
+                    <button class="button-page">SIGN UP</button>
+
                 </div>   
             </div>
         </div>
@@ -41,28 +44,25 @@
                 
             window.onload = function (){
 
-                document.getElementById("button-login").onclick = function check(){
+                document.querySelector(".button-page").onclick = ()=>{
 
                     var name;
                     var password; 
                     var input1;
 
-                    name = document.getElementById("fname").value;
-                    password = document.getElementById("password").value;    
-                    input1= document.getElementById("err1");
+                    name = document.querySelector(".fname").value;
+                    password = document.querySelector(".password").value;    
+                    input1= document.querySelector(".err1");
 
                     if(!name || !password){     
                         input1.innerHTML = "Incorrect password or username ";
                         input1.style.color = "white";
                     }else{
                         input1.innerHTML = "";
-                        window.location.href= "home-page.html";
+                        window.location.href= "";
                     }
                 }  
             };
-               
-            
-            
         </script>
     </body>
 </html>
