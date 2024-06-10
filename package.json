@@ -1,9 +1,9 @@
 {
-  "name": "airsoft-shop",
+  "name": "air-soft-shop",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "login-page.html",
   "author": "Alessandro Comuzzi",
   "license": "MIT",
-  "description": "it's an e-commerce airsoft shop",
+  "description": "An air-soft e-commerce",
   "private": true
 }
