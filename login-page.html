@@ -7,57 +7,54 @@
         <link rel="icon" href="images/favicon.ico">
     </head>
     <body class="login-container">
-        <div class="login-content">
+        <img src="images/login-page/aksu-img.png">
+        <img class="login-title" src="images/login-page/title-img.png">
 
-            <img src="images/login-page/aksu-img.png">
-            <img class="login-title" src="images/login-page/title-img.png">
+        <h1 class="login-subtitle">LOGIN ACCOUNT</h1>
 
-            <h1 class="login-subtitle">LOGIN ACCOUNT</h1>
+        <form class="login-form" action="name">
+            <p class="error-label"></p>
+            <div class="form-field">
+                <label class="label-login" for="user-name">Username:</label>
+                <input type="text" class="user-name" name="username">
+            </div>
+            
+            <div class="form-field">
+                <label class="label-login" for="user-password">Password:</label>
+                <input type="password" class="user-password" name="raw-password">
+            </div>
+            
+            <button class="login-button">LOGIN</button>
+        </form>
 
-            <div class="login-form">
-                <form action="name">
-
-                    <p class="err-1"></p>
-                    <label class="label-login" for="user-name">username</label>
-                    <input type="text" class="user-name" name="username">
-                    
-                    <label class="label-login" for="user-password">password</label>
-                    <input type="password" class="user-password" name="raw-password">
-                    
-                </form>
-                <button class="login-page-button">LOGIN</button>
+        <div class="sing-in-container">
+            <div class="sign-in-section">
+                <img class="sing-in-image" src="images/login-page/back-jbt.jpeg">
             </div>
 
-            <div class="sing-in-content">
-        
-                <img class="img-sing-in" src="images/login-page/back-jbt.jpeg">
-                <h1 class="title-sing-in">Don't have an account?</h1>
+            <div class="sign-in-section">
+                <h3 class="sing-in-title">Don't have an account?</h3>
                 <p>Don't worry, just</p>
                 <button class="sing-in-button">SIGN UP</button>
-    
             </div>
         </div>
 
         <script type="text/javascript">
                 
-            window.onload = function (){
+            window.onload = function () {
+                document.querySelector(".login-button").onclick = () => {
+                    const name = document.querySelector(".user-name").value;
+                    const password = document.querySelector(".user-password").value;    
+                    const input1= document.querySelector(".error-label");
 
-                document.querySelector(".login-page-button").onclick = ()=>{
-
-                    let name;
-                    let password; 
-                    let input1;
-
-                    name = document.querySelector(".user-name").value;
-                    password = document.querySelector(".user-password").value;    
-                    input1= document.querySelector(".err-1");
-
-                    if(!name || !password){     
+                    if(!name || !password){
                         input1.innerHTML = "Incorrect password or username ";
                         input1.style.color = "white";
+                        input1.style.display = "unset";
                     }else{
                         input1.innerHTML = "";
                         window.location.href= "";
+                        input1.style.display = "none";
                     }
                 }  
             };
