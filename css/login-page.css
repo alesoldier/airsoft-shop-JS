@@ -2,15 +2,15 @@
     background-color: gray;
     background-image: url("../images/background/background-soft4.jpeg");
     background-repeat: no-repeat;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-form{
-    display: block;
     margin: 0 auto;
     padding-top: 40px;
     text-align: center;
-    width: 250px;
+    width: 30%;
 }
 
 .login-subtitle{
@@ -18,22 +18,24 @@
     text-align: center;
 }
 
-.singIn-content{
+.sing-in-content{
     background-color: darkslategray;
+    border: 2px solid black;
     border-radius: 20px;
-    margin: 40px auto;
+    margin: 0 auto;
+    margin-top: 40px;
     padding: 30px 0;
-    width: 600px;
+    width: 60%;
 }
 
-.img-singIn{
+.img-sing-in{
     border-radius: 20px;
     float: left;
     margin-top: 50px;
     margin-left: 40px;
 }
 
-.title-singIn{
+.title-sing-in{
     color: black;
 }
 
@@ -42,11 +44,11 @@
     text-align: center;
 }
 
-.password{
+.user-password{
     margin: 20px auto; 
 }
 
-.fname{
+.user-name{
     margin: 20px auto; 
 }
 
@@ -58,12 +60,11 @@
 
 
 
-.button-page{
+.login-page-button, .sing-in-button{
     background-color: brown;
     border-radius: 20px;
     color: white;
     font-size: 25px;
-
     padding: 20px 28px;
 
     &:hover{

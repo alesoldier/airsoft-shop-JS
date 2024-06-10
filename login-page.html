@@ -9,34 +9,32 @@
     <body class="login-container">
         <div class="login-content">
 
-            <img src="images/login-page/aksu.png" alt="err">
-            <img class="login-title" src="images/login-page/title.png" alt="err">
+            <img src="images/login-page/aksu-img.png">
+            <img class="login-title" src="images/login-page/title-img.png">
 
             <h1 class="login-subtitle">LOGIN ACCOUNT</h1>
 
             <div class="login-form">
                 <form action="name">
 
-                    <p class="err1"></p>
-                    <label class="label-login" for="fname">username</label>
-                    <input type="text" class="fname" name="username">
+                    <p class="err-1"></p>
+                    <label class="label-login" for="user-name">username</label>
+                    <input type="text" class="user-name" name="username">
                     
-                    <label class="label-login" for="password">password</label>
-                    <input type="password" class="password" name="raw-password">
+                    <label class="label-login" for="user-password">password</label>
+                    <input type="password" class="user-password" name="raw-password">
                     
                 </form>
-                <button class="button-page">LOGIN</button>
+                <button class="login-page-button">LOGIN</button>
             </div>
 
-            <div class="singIn-content">
-                <div class="singIn-container">
-
-                    <img class="img-singIn" src="images/login-page/back-jbt.jpeg" alt="sorry">
-                    <h1 class="title-singIn">Don't have an account?</h1>
-                    <p>Don't worry, just</p>
-                    <button class="button-page">SIGN UP</button>
-
-                </div>   
+            <div class="sing-in-content">
+        
+                <img class="img-sing-in" src="images/login-page/back-jbt.jpeg">
+                <h1 class="title-sing-in">Don't have an account?</h1>
+                <p>Don't worry, just</p>
+                <button class="sing-in-button">SIGN UP</button>
+    
             </div>
         </div>
 
@@ -44,15 +42,15 @@
                 
             window.onload = function (){
 
-                document.querySelector(".button-page").onclick = ()=>{
+                document.querySelector(".login-page-button").onclick = ()=>{
 
-                    var name;
-                    var password; 
-                    var input1;
+                    let name;
+                    let password; 
+                    let input1;
 
-                    name = document.querySelector(".fname").value;
-                    password = document.querySelector(".password").value;    
-                    input1= document.querySelector(".err1");
+                    name = document.querySelector(".user-name").value;
+                    password = document.querySelector(".user-password").value;    
+                    input1= document.querySelector(".err-1");
 
                     if(!name || !password){     
                         input1.innerHTML = "Incorrect password or username ";
