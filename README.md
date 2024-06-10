@@ -1,15 +1,19 @@
-# airsoft-sop
+# Air-soft shop
 
+Right now I've only developed the login page, but no worry I'm working on it.
 
-for now in the app is there's only the login page, but no worry i'm working on it.
+## Description:
 
-DESCRIPTION:
-this site represent an E-commerce shop for airsoft were you can buy ASG(air soft guns).
-i've utilized only html, javascript and css for the development of this app.
+This is an E-commerce for an airsoft shop where you can buy ASG(air-soft guns).
+I've only used html, JS and CSS for the development.
 
-HOW IT WORKS:
-it work just like other login pages, you will need to insert your username and password to continue (for now the login page is the only implemented feature).
+## Instruction:
 
-INSTRUCTION:
-so, you will need to download all the files i've downloaded on github, after having downloaded the files you will need to find the "login-page.html"(it should be in the arisoft-shop.JS directory) and open it on google or every other browser that support html, javascript and css, after all this you're good to try the site.
-it works like other login page and feel free to test it out.
+- Clone the repo on locale;
+- Open the "login-page.html" page on a browser (it should be in the air-soft shop.JS directory);
+
+## How it works:
+
+- You'll first be redirected to the login page;
+- insert your credentials (right now it just works since we haven't implemented the validation yet);
+- TODO: ... (still in development) ...
