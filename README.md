@@ -7,17 +7,19 @@ Right now I've only developed the login page, but no worry I'm working on it.
 This is an E-commerce for an airsoft shop where you can buy ASG(air-soft guns).
 I've only used html, JS and CSS for the development.
 
-## Instruction:
+## How to start the dev server:
 
-- Clone the repo on locale;
+First of all you need to clone the repository on your machine then:
 
-### 1° method
+### 1° method: Using VSC extension
 
-- Open the "login-page.html" page on a browser (it should be in the air-soft shop.JS directory);
+- Install the VScode extension "Live Server" => (extensionId: ritwickdey.LiveServer)
+- Click the "Go live" button in the bottom right corner of the IDE;
+  <!-- FIXME: This process is broken -->
 
-### 2° method
+### 2° method: Directly open from browser
 
-- Install the VScode extension live Server, enable it by pressing the button "live server" on the bottom right of VScode and start the server, after that you will need to press on the link for the login-page;
+- drag the "login-page.html" page file inside the tab of a browser
 
 ## How it works:
 
