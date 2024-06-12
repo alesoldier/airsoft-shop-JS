@@ -25,7 +25,7 @@
                 <input type="password" id="user-password" name="raw-password">
             </div>
             
-            <input type="submit" class="login-button" name="submit">
+            <input type="submit" class="login-button">
         </form>
 
         <div class="sing-in-container">
@@ -44,7 +44,7 @@
 
             window.onload = function () {
                 const loginForm = document.forms["login-form"];
-                const input1= document.querySelector(".error-label");   
+                const errorParagraph= document.querySelector(".error-label");   
 
                 loginForm.addEventListener('submit', (submitEvent)=>{
                     // Prevent default avoids the refresh of the page
@@ -56,14 +56,14 @@
                     const password = formData.get('raw-password')
 
                     if(!username || !password){
-                        input1.innerHTML = "Incorrect password or username ";
-                        input1.style.color = "white";
-                        input1.style.display = "unset";
+                        errorParagraph.innerHTML = "Incorrect password or username ";
+                        errorParagraph.style.color = "white";
+                        errorParagraph.style.display = "unset";
 
                         return false;
                     }else{
-                        input1.innerHTML = "";
-                        input1.style.display = "none";
+                        errorParagraph.innerHTML = "";
+                        errorParagraph.style.display = "none";
 
                         // TODO: Add Login actions, home page is not ready yet
                     }
