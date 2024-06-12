@@ -106,5 +106,38 @@
             </div>
         </div>
 
+        <script type="text/javascript">
+            window.onload = function (){
+               let itemCount = 1;
+               let buttonMinus;
+               let buttonPlus;
+               let menuTent;
+               let textTent;
+               // increase and decrease methods for the product.
+
+               buttonMinus = document.querySelector(".product-minus");
+               buttonPlus = document.querySelector(".product-plus");
+               
+               buttonMinus.addEventListener("click", decrement);
+               buttonPlus.addEventListener("click", increment);
+
+               function increment(){
+                   let incrementItemCount = document.querySelector(".product-number");
+                   itemCount++;
+                   incrementItemCount.innerHTML = itemCount;
+               }
+
+               function decrement(){
+                   if(itemCount<=1){
+                       alert("cant buy less than 1");
+                   }else{
+                       let incrementItemCount = document.querySelector(".product-number");
+                       itemCount--;
+                       incrementItemCount.innerHTML = itemCount;
+                   }
+               }
+           }
+       </script>
+
     </body>
 </html>
