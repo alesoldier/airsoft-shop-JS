@@ -1,69 +1,90 @@
-body{
+.login-container{
+    align-items: center;
     background-color: gray;
-    background-image: url("background-soft4.jpeg");
+    background-image: url("../images/background/background-soft4.jpeg");
     background-repeat: no-repeat;
-    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
 }
 
-div#forma{
-    width: 300px;
-    margin: 0 auto;
-    padding-top: 40px;
-    display: block;
-    text-align: center;
-}
-
-h1{
-    text-align: center;
+.login-subtitle{
     color: white;
+    text-align: center;
 }
 
-div.jumbotron-fluid{
+.login-form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.form-field {
+    /* Width 100% and justify-end are required to align the items to the end so in case labels have different lengths they will always be vertically aligned */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    width: 100%;
+}
+
+.label-login{
+    color: white;
+    margin-right: 14px;
+    text-align: center;
+}
+
+.sing-in-container{
     background-color: darkslategray;
-    width: 600px;
-    margin: 80px auto;
-}
-
-img#img-jbt{
     border-radius: 20px;
-    float: left;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
 }
 
-h1#title-j{
+.sign-in-section {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sing-in-image{
+    border-radius: 20px;
+    width: 150px;
+}
+
+.sing-in-title{
     color: black;
+    font-size: 32px;
+    margin: 0;
 }
 
-label{
-    text-align: center;
-    color: white;
-}
-
-input{
-    margin: 20px auto; 
-}
-
-div#content{
-    width: 900px;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-}
-
-button{
-    color: white;
+.login-button, .sing-in-button{
     background-color: brown;
+    border-radius: 20px;
+    color: white;
     font-size: 25px;
     padding: 20px 28px;
-    border-radius: 20px;
 
+    &:hover{
+        background-color: azure;
+        color: black;
+    }
 }
 
-button:hover{
-    color: black;
-    background-color: azure;
-}
-
-button#btn-s{
-    margin-left: 17%;
-    
+.error-label{
+    display: none;
 }
