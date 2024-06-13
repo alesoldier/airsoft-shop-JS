@@ -5,22 +5,17 @@
 .home-header{
     align-items: center;
     background-color: gray;
+    background-image: url(background-soft2.jpeg);
+    background-repeat: no-repeat;
     border: 2px solid black;
+    border-radius: 5px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    gap: 450px;
-    height: 160px;
-    justify-content: center;
-}
-
-.img-header{
-    background-repeat: no-repeat;
-    background-image: url(background-soft2.jpeg);
-    border-radius: 5px;
-    height: 140px;
-    margin: 10px 20px;
-    width: 300px;
+    flex-wrap: wrap; 
+    gap: 25%;
+    min-height: 160px;
+    justify-content: end;
 }
 
 .header-content{
@@ -33,7 +28,7 @@
 }
 
 .profile-img{
-    margin-left: 550px;
+    margin-left: 150px;
 }
 
 .navbar-container{
@@ -43,7 +38,7 @@
     float: left;
     margin-left: 40px;
     margin-top: 20px;   
-    width: 10%;
+    width: 200px;
 
     
 }
