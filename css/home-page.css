@@ -5,17 +5,22 @@
 .home-header{
     align-items: center;
     background-color: gray;
-    background-image: url(background-soft2.jpeg);
-    background-repeat: no-repeat;
     border: 2px solid black;
     border-radius: 5px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
-    gap: 25%;
+    gap: 20%;
     min-height: 160px;
-    justify-content: end;
+    justify-content:space-evenly;
+}
+
+.header-img{
+    border: 2px solid black;
+    border-radius: 5px;
+    min-width: 300px;
+    margin: 10px 0;
 }
 
 .header-content{
@@ -25,10 +30,6 @@
     padding: 50px 20;
     justify-content: flex-start;
 
-}
-
-.profile-img{
-    margin-left: 150px;
 }
 
 .navbar-container{
@@ -161,6 +162,7 @@
 
 .footer-img{
     display: flex;
+    flex-wrap: wrap; 
     gap: 50px;
     justify-content: center;
 }
