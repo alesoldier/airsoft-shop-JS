@@ -1,6 +1,6 @@
 .home-page{
     background-color: lightgoldenrodyellow;
-    padding: 40px 40px;
+    
 }
 
 .home-header{
@@ -12,7 +12,7 @@
     flex-direction: row;
     gap: 450px;
     height: 160px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .img-header{
@@ -34,7 +34,7 @@
 }
 
 .profile-img{
-    margin-left: 350px;
+    margin-left: 550px;
 }
 
 .navbar-container{
@@ -142,3 +142,41 @@
     margin: 0 10px;
 }
 
+.footer-title{
+    border-bottom: 2px solid black;
+}
+
+.home-footer{
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 5px;
+    clear: both;
+}
+
+.footer-title{
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 0px;
+}
+
+.footer-contact{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-text{
+    display: inline;
+
+}
+
+.footer-img{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.social-img{
+    border-radius: 20px;
+    margin: 30px 0;
+}
