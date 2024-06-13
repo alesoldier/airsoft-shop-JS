@@ -1,6 +1,5 @@
 .home-page{
     background-color: lightgoldenrodyellow;
-    
 }
 
 .home-header{
@@ -20,15 +19,15 @@
     background-image: url(background-soft2.jpeg);
     border-radius: 5px;
     height: 140px;
-    width: 300px;
     margin: 10px 20px;
+    width: 300px;
 }
 
 .header-content{
-    padding: 50px 20;
     display: flex;
     flex-direction: row;
     gap: 50px;
+    padding: 50px 20;
     justify-content: flex-start;
 
 }
@@ -59,10 +58,10 @@
 }
 
 .nav-links {
+    color: #000;
     display: block;
     padding: 10px 15px;
     text-decoration: none;
-    color: #000;
 }
 
 .items-text {
@@ -91,11 +90,7 @@
 
 .nav-branch:hover .sub-navbar {
     display: block;
-
-    
 }
-
-
 
 .home-page-content{
     margin-left: 300px;
@@ -105,16 +100,16 @@
 .home-product{
     background-color: white;
     border: 1px solid black;
-    margin: 100px 100px;
     float: left;
+    margin: 100px 100px;
     height: 475px;
     width: 300px;
 }
 
 .img-product{
-    width: 250px;
     height: 250px;
     margin: 20px 25px;
+    width: 250px;
 }
 
 .product-title{
@@ -124,8 +119,8 @@
 .description-container{
     border: 1px solid black;
     margin: 18px 10%;
-    width: 250px;
     height: 80px;
+    width: 250px;
     
 }
 
@@ -154,26 +149,25 @@
 }
 
 .footer-title{
-    text-align: center;
-    padding: 30px 0;
     margin-top: 0px;
+    padding: 30px 0;
+    text-align: center;
 }
 
 .footer-contact{
     display: flex;
-    justify-content: center;
     gap: 50px;
+    justify-content: center;
 }
 
 .contact-text{
     display: inline;
-
 }
 
 .footer-img{
     display: flex;
-    justify-content: center;
     gap: 50px;
+    justify-content: center;
 }
 
 .social-img{
