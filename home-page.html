@@ -1,92 +1,100 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=1920px, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/home-page.css">
         <title>ontarget - home</title>
         <link rel="icon" href="images/favicon.ico">
     </head>
     <body class="home-page">
-        <div class="img-header">
-
-        </div>
         <div class="home-header">
-            <a href="home-page.html"><img class="home-title" src="images/home-page/title-small.png" alt=""></a>
-            <a href=""><img class="profile-img" src="images/home-page/profile-img.png" alt=""></a>
-            <a href=""><img class="shopping-cart-img" src="images/home-page/shopping-cart.png" alt=""></a>
-        </div> 
+            <div class="img-header">
 
-        <div class="home-navbar">
-            <ul>
-                <p>MENU:</p>
+            </div>
+            <div class="header-content">
+                <a href="home-page.html"><img  src="images/home-page/title-small.png" alt=""></a>
+                <a href=""><img class="profile-img" src="images/home-page/profile-img.png" alt=""></a>
+                <a href=""><img src="images/home-page/shopping-cart.png" alt=""></a>
+            </div> 
+        </div>
+
+        <div class="navbar-container">
+            <ul class="home-navbar">
                 <li class="nav-branch">
-                    <div class="items-branch1">
+                    <div class="nav-items">
                         <a href="" class="nav-links">CLOTHING</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Men's Clothing</a></li>
+                            <li><a href="" class="sub-nav-links">Women's Clothing</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch2">
+                    <div>
                         <a href="" class="nav-links">TACTICAL GEAR</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Helmets</a></li>
+                            <li><a href="" class="sub-nav-links">Vests</a></li>
+                        </ul>
                     </div>
-                   
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch3">
+                    <div>
                         <a href="" class="nav-links">CONSUMABLES</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Food</a></li>
+                            <li><a href="" class="sub-nav-links">Drinks</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch4">
+                    <div>
                         <a href="" class="nav-links">ACCESSORIES</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Gloves</a></li>
+                            <li><a href="" class="sub-nav-links">Hats</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch5">
+                    <div>
                         <a href="" class="nav-links">MEDICAL EQUIPMENT</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">First Aid Kits</a></li>
+                            <li><a href="" class="sub-nav-links">Bandages</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch6">
+                    <div>
                         <a href="" class="nav-links">ASG</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Airsoft Guns</a></li>
+                            <li><a href="" class="sub-nav-links">BBs</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch7">
+                    <div>
                         <a href="" class="nav-links">AIMING SYSTEM</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Scopes</a></li>
+                            <li><a href="" class="sub-nav-links">Sights</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-branch">
-                    <div class="items-branch8">
+                    <div>
                         <a href="" class="nav-links">INTERNAL PARTS</a>
-
-                        <p class="items-text"> test</p>
-                        
+                        <ul class="sub-navbar">
+                            <li><a href="" class="sub-nav-links">Gearboxes</a></li>
+                            <li><a href="" class="sub-nav-links">Motors</a></li>
+                        </ul>
                     </div>
                 </li>
-                
             </ul>
         </div>
+
         <div class="home-page-content">
             <div class="home-product">
                 <div class="product-body">
@@ -108,34 +116,36 @@
 
         <script type="text/javascript">
             window.onload = function (){
-               let itemCount = 1;
-               let buttonMinus;
-               let buttonPlus;
-               let menuTent;
-               let textTent;
+                
+                let itemCount = 1;
+                let buttonMinus;
+                let buttonPlus;
+                let menuTent;
+                let textTent;
+
                // increase and decrease methods for the product.
 
-               buttonMinus = document.querySelector(".product-minus");
-               buttonPlus = document.querySelector(".product-plus");
+                buttonMinus = document.querySelector(".product-minus");
+                buttonPlus = document.querySelector(".product-plus");
                
-               buttonMinus.addEventListener("click", decrement);
-               buttonPlus.addEventListener("click", increment);
+                buttonMinus.addEventListener("click", decrement);
+                buttonPlus.addEventListener("click", increment);
 
-               function increment(){
+                function increment(){
                    let incrementItemCount = document.querySelector(".product-number");
                    itemCount++;
                    incrementItemCount.innerHTML = itemCount;
-               }
+                }
 
-               function decrement(){
-                   if(itemCount<=1){
+                function decrement(){
+                    if(itemCount<=1){
                        alert("cant buy less than 1");
-                   }else{
+                    }else{
                        let incrementItemCount = document.querySelector(".product-number");
                        itemCount--;
                        incrementItemCount.innerHTML = itemCount;
-                   }
-               }
+                    }
+                }
            }
        </script>
 
