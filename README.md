@@ -30,4 +30,5 @@ After the installation you have few options for starting the local server:
 
 - You'll first be redirected to the login page;
 - insert your credentials (right now it just works since we haven't implemented the validation yet);
-- TODO: ... (still in development) ...
+- Welcome, now you're in the home of the website were you can buy every kind of rifle.
+- TODO: ... still in development ...
