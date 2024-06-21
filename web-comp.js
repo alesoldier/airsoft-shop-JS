@@ -1,96 +1,148 @@
-const templateProduct = document.createElement("template")
-templateProduct.innerHTML = `
-<style>
+const cardCont = document.querySelector(".products-container");
 
-.catalog-product{
-    background-color: white;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    max-width: 210px;
-    padding: 24px;
-}
+const products = [
+    {
+        id: 1,
+        imageURL: "images/product/ak101-img.jpeg",
+        altAlert: " it's an ak101",
+        name: "ak101",
+        description: "the ak101 it's a very curious rifle because it combines the look of the ak with the fire power of his historical enemy, chambered in 5.56x45 the ak101 provides one of the most armor piercing experience",
+        category: "",
+        price: 299.99
+    },
+    {
+        id: 2,
+        imageURL: "images/product/ak12-img.jpeg",
+        altAlert: " it's an ak12",
+        name: "ak12",
+        description: "choosed in 2019 for becoming the issued rifle of the russian army the ak12 is a very reliable weapon, thankfully to his adjustable stock and the added rails that can allow the user to utilize ordinary aiming systems has become one of the greatest ak ever invented",
+        category: "",
+        price: 399.99
+    },
+    {
+        id: 3,
+        imageURL: "images/product/ak74-img.jpeg",
+        altAlert: " it's an ak74",
+        name: "ak74",
+        description: "one of the most famous rifle in the entire world. the ak74 chambered in 5.45x39 combine the strenght and the reliability of the 7.62x39 but with his lower diameter provides a better penetration and less stopping power",
+        category: "",
+        price: 149.99
+    },
+    {
+        id: 4,
+        imageURL: "images/product/sr25-img.jpeg",
+        altAlert: " it's an sr25 rifle",
+        name: "sr25",
+        description: "precise and accurate the sr25 will never cease to impress, even the most experienced marksman would choose an sr25 over every other rifle. this rifle it's a DMR(designated marksman rifle), cambered in 308 (7.62x51) has an generous stopping power linked with a good penetration against the most advanced body protection",
+        category: "",
+        price: 379.99
+    },
+    {
+        id: 5,
+        imageURL: "images/product/mk17-img.jpeg",
+        altAlert: " it's an mk17",
+        name: "mk17",
+        description: "Long-range rifle with high accuracy and durable construction, chambered in 308 (7.62x51) allow to take down even the most armored target. Thanks to the fire switch we can use the mk17 even in full auto, be careful the recoil kick ass",
+        category: "",
+        price: 449.99
+    },
+];
 
-.squared-image-container{
-    aspect-ratio: 1;
-    border: 1px solid black;
-    width: 100%;
-}
+function doWebComponent(item){
+    const templateProduct = document.createElement("template")
+    templateProduct.innerHTML = `
+        <style>
 
-.product-image{
-    aspect-ratio: 1;
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
-}
+        .catalog-product{
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            max-width: 210px;
+            padding: 24px;
+        }
 
-.product-title{
-    margin: 0 auto;
-}
+        .squared-image-container{
+            aspect-ratio: 1;
+            border: 1px solid black;
+            width: 100%;
+        }
 
-.description-container{
-    border: 1px solid black;
-    height: 80px;
-    margin: 18px 0;
-    overflow: auto;
-    padding: 8px;
-}
+        .product-image{
+            aspect-ratio: 1;
+            display: block;
+            max-height: 100%;
+            max-width: 100%;
+        }
 
-.product-price{
-    margin: 0 auto;
-    margin-bottom: 24px;
-}
+        .product-title{
+            margin: 0 auto;
+        }
 
-.product-actions{
-    display: flex;
-    justify-content: space-between;
-}
+        .description-container{
+            border: 1px solid black;
+            height: 80px;
+            margin: 18px 0;
+            overflow: auto;
+            padding: 8px;
+        }
 
-.product-quantity-container{
-    align-items: center;
-    display: flex;
-    flex-wrap: nowrap;
-}
+        .product-price{
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
 
-.product-quantity{
-    margin: 0 16px;
-}
+        .product-actions{
+            display: flex;
+            justify-content: space-between;
+        }
 
-</style>
-<div class="products-container">
-                <div class="catalog-product">
+        .product-quantity-container{
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+        }
 
-                    <div class="squared-image-container">
-                        <img class="product-image" src="images/product/ak101-img.jpeg" alt=" an ak101 ">
-                    </div>
+        .product-quantity{
+            margin: 0 16px;
+        }
 
-                    <h5 class="product-title">
-                        AK-101 
-                    </h5>
+        </style>
+        <div class="products-container">
+            <div class="catalog-product">
 
-                    <div class="description-container">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit tellus massa, quis mollis justo eleifend in. Fusce vitae varius massa. Etiam nisl nisl, fringilla in dolor ut, sagittis sagittis sem. Pellentesque ultrices risus a justo vulputate, sed rhoncus risus ornare. Aliquam auctor nisi non tempor consequat. Nullam ut accumsan ex. Donec luctus justo risus, quis rutrum magna interdum eu. Pellentesque eget ante a sem gravida mollis a efficitur mauris. Fusce eu sem vel elit cursus porttitor. Donec luctus eleifend magna id ultricies.
-                        Duis pellentesque ipsum leo, a ullamcorper elit vestibulum at. Sed ac interdum lectus. Donec rutrum sagittis neque, quis rhoncus ex egestas in. Aliquam venenatis, metus varius tincidunt fermentum, sem ex congue nulla, ut faucibus justo sem non metus. Sed velit nibh, fermentum in elit eu, egestas viverra quam. In quis lacus id dolor vulputate sodales. Nunc rhoncus massa sodales sem ultrices elementum. Sed vulputate vel risus non pulvinar. Donec cursus dui lorem, et consequat leo tincidunt a. Aliquam finibus, dui at volutpat ultricies, ligula mauris pretium justo, quis semper arcu enim at turpis. Maecenas dictum ante metus, sed porta sapien accumsan scelerisque. Donec bibendum, mi vitae lacinia imperdiet, ipsum erat rhoncus est, sit amet volutpat erat mi porttitor felis. Fusce nec odio ante. Nulla facilisi. Quisque nec consequat dolor, a sollicitudin velit.
-                        Nullam ullamcorper metus et purus scelerisque feugiat. Nunc id purus non lorem rutrum tristique. In hac habitasse platea dictumst. Fusce euismod pharetra leo. Aenean et quam congue, accumsan est sit amet, dignissim nisi. Suspendisse potenti. Donec at quam maximus, dictum ligula sed, scelerisque velit. Nunc quis sagittis nunc. Morbi congue, purus sed varius congue, lorem diam tristique massa, faucibus placerat turpis eros at risus. Etiam lectus massa, condimentum id posuere imperdiet, sollicitudin at magna. Nam blandit placerat tellus, eget condimentum est tristique id. Maecenas eu metus in arcu posuere eleifend. Fusce in justo mollis, ultrices felis a, laoreet lacus. Duis ante orci, euismod eu placerat non, interdum eu tortor.
-                    </div>
-
-                    <h5 class="product-price">
-                    399.99$
-                    </h5>
-                        
-                    <div class="product-actions">
-                        <span class="product-quantity-container">
-                            <button class="decrement-quantity-button">-</button>
-                            <span class="product-quantity">1</span>
-                            <button class="increment-quantity-button">+</button>
-                        </span>
-
-                        <!-- TODO: Add button action -->
-                        <button disabled>ADD</button>
-                    </div>
+                <div class="squared-image-container">
+                    <img class="product-image" src="${item.imageURL}" alt="${item.altAlert}">
                 </div>
-            </div>`
+
+                <h5 class="product-title">
+                    ${item.name}
+                </h5>
+
+                <div class="description-container">
+                    ${item.description}
+                </div>
+
+                <h5 class="product-price">
+                    ${item.price}
+                </h5>
+                    
+                <div class="product-actions">
+                    <span class="product-quantity-container">
+                        <button class="decrement-quantity-button">-</button>
+                        <span class="product-quantity">1</span>
+                        <button class="increment-quantity-button">+</button>
+                    </span>
+
+                    <!-- TODO: Add button action -->
+                    <button disabled>ADD</button>
+                </div>
+            </div>
+        </div>`            
+
+        return templateProduct;
+}
 
 class product extends HTMLElement {
     constructor (){
@@ -98,7 +150,7 @@ class product extends HTMLElement {
         const shadow = this.attachShadow({ mode: "open"})
         shadow.append(templateProduct.content.cloneNode(true))
         this.title = shadow.querySelector(".container")
-
+        
         const buttonMinus = shadow.querySelector(".decrement-quantity-button")
         const buttonPlus = shadow.querySelector(".increment-quantity-button")
         const incrementItemCount = shadow.querySelector(".product-quantity");
@@ -111,26 +163,26 @@ class product extends HTMLElement {
             itemCount++;
 
             if(itemCount>1){
-                 buttonMinus.removeAttribute('disabled')
-             }
+                buttonMinus.removeAttribute('disabled')
+            }
             
-             incrementItemCount.innerHTML = itemCount;
-         }
+            incrementItemCount.innerHTML = itemCount;
+        }
 
-         function decrement(){
-             if(itemCount<=1){
+        function decrement(){
+            if(itemCount<=1){
                 alert("cant buy less than 1");
                 return
-             }
-             
-             itemCount--;
+            }
+            
+            itemCount--;
 
-             if(itemCount<=1){
-                 buttonMinus.setAttribute('disabled', true)
-             }
-             
-             incrementItemCount.innerHTML = itemCount;
-         }
+            if(itemCount<=1){
+                buttonMinus.setAttribute('disabled', true)
+            }
+            
+            incrementItemCount.innerHTML = itemCount;
+        }
 
         buttonMinus.addEventListener("click", decrement);
         buttonPlus.addEventListener("click", increment);
@@ -138,7 +190,10 @@ class product extends HTMLElement {
 }
 
 customElements.define("product-div", product);
-    
 
-    
+
+for(let i=0; i<products.length;i++){
+    let itemCard = doWebComponent(products[i])
+    cardCont.innerHTML += itemCard.innerHTML
+}
 

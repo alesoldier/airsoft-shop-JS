@@ -152,6 +152,15 @@
                 </h1>
 
                 <div class="products-container">
+                    <!--
+                    <product-div></product-div>
+                    <product-div></product-div>
+                    <product-div></product-div>
+                    <product-div></product-div>
+                    <product-div></product-div>
+                    -->
+
+                    <product-div></product-div>
                 </div>
             </div>
         </div>
@@ -179,24 +188,8 @@
         </div>
 
         <script type="text/javascript">
-            window.onload = function (){
-                const productArray = new Array()
 
-                productArray[0]= "<product-div></product-div>"
-                productArray[1]= "<product-div></product-div>"
-                productArray[2]= "<product-div></product-div>"
-                productArray[3]= "<product-div></product-div>"
-                productArray[4]= "<product-div></product-div>"
-
-
-                for(var i=0; i<productArray.length;i++){
-                    const products = document.querySelector(".products-container")
-                    products.innerHTML += productArray[i];
-                }
-            }
+           
        </script>
     </body>
 </html>
-
-
-
