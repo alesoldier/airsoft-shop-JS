@@ -177,11 +177,6 @@ class CatalogProduct extends HTMLElement {
         }
 
         function decrement(){
-            if(itemCount<=1){
-                alert("cant buy less than 1");
-                return
-            }
-            
             itemCount--;
 
             if(itemCount<=1){
