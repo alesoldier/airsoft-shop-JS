@@ -13,7 +13,7 @@ const catalogProducts = [
         imageURL: "images/product/ak12-img.jpeg",
         altAlert: " it's an ak12",
         name: "ak12",
-        description: "choosed in 2019 for becoming the issued rifle of the russian army the ak12 is a very reliable weapon, thankfully to his adjustable stock and the added rails that can allow the user to utilize ordinary aiming systems has become one of the greatest ak ever invented",
+        description: "chose in 2019 for becoming the issued rifle of the russian army the ak12 is a very reliable weapon, thankfully to his adjustable stock and the added rails that can allow the user to utilize ordinary aiming systems has become one of the greatest ak ever invented",
         category: "",
         price: 399.99
     },
@@ -22,7 +22,7 @@ const catalogProducts = [
         imageURL: "images/product/ak74-img.jpeg",
         altAlert: " it's an ak74",
         name: "ak74",
-        description: "one of the most famous rifle in the entire world. the ak74 chambered in 5.45x39 combine the strenght and the reliability of the 7.62x39 but with his lower diameter provides a better penetration and less stopping power",
+        description: "one of the most famous rifle in the entire world. the ak74 chambered in 5.45x39 combine the strength and the reliability of the 7.62x39 but with his lower diameter provides a better penetration and less stopping power",
         category: "",
         price: 149.99
     },
@@ -43,6 +43,15 @@ const catalogProducts = [
         description: "Long-range rifle with high accuracy and durable construction, chambered in 308 (7.62x51) allow to take down even the most armored target. Thanks to the fire switch we can use the mk17 even in full auto, be careful the recoil kick ass",
         category: "",
         price: 449.99
+    },
+    {
+        id: 6,
+        imageURL: "images/product/akm-img.jpeg",
+        altAlert: " it's an akm",
+        name: "akm",
+        description: "the one and only, the most famous rifle, the akm. chambered in 7.62x39 has served in numerous war becoming well known among the people.",
+        category: "",
+        price: 139.99
     },
 ];
 
