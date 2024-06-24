@@ -1,6 +1,4 @@
-const cardCont = document.querySelector(".products-container");
-
-const products = [
+const catalogProducts = [
     {
         id: 1,
         imageURL: "images/product/ak101-img.jpeg",
@@ -48,8 +46,9 @@ const products = [
     },
 ];
 
-function doWebComponent(item){
-    const templateProduct = document.createElement("template")
+function getCatalogProductTemplate(productInfo){
+    const templateProduct = document.createElement("template");
+
     templateProduct.innerHTML = `
         <style>
 
@@ -113,19 +112,19 @@ function doWebComponent(item){
             <div class="catalog-product">
 
                 <div class="squared-image-container">
-                    <img class="product-image" src="${item.imageURL}" alt="${item.altAlert}">
+                    <img class="product-image" src="${productInfo.imageURL}" alt="${productInfo.altAlert}">
                 </div>
 
                 <h5 class="product-title">
-                    ${item.name}
+                    ${productInfo.name}
                 </h5>
 
                 <div class="description-container">
-                    ${item.description}
+                    ${productInfo.description}
                 </div>
 
                 <h5 class="product-price">
-                    ${item.price}
+                    ${productInfo.price}€
                 </h5>
                     
                 <div class="product-actions">
@@ -134,9 +133,6 @@ function doWebComponent(item){
                         <span class="product-quantity">1</span>
                         <button class="increment-quantity-button">+</button>
                     </span>
-
-                    <!-- TODO: Add button action -->
-                    <button disabled>ADD</button>
                 </div>
             </div>
         </div>`            
@@ -144,20 +140,22 @@ function doWebComponent(item){
         return templateProduct;
 }
 
-class product extends HTMLElement {
-    constructor (){
+class CatalogProduct extends HTMLElement {
+    constructor (catalogProductInfo){
         super()
-        const shadow = this.attachShadow({ mode: "open"})
-        shadow.append(templateProduct.content.cloneNode(true))
-        this.title = shadow.querySelector(".container")
-        
-        const buttonMinus = shadow.querySelector(".decrement-quantity-button")
-        const buttonPlus = shadow.querySelector(".increment-quantity-button")
-        const incrementItemCount = shadow.querySelector(".product-quantity");
-        let itemCount = 1;
+        const shadow = this.attachShadow({ mode: "open"});
 
-        console.log(buttonMinus)
-        console.log(buttonPlus)
+        const productTemplateElement = getCatalogProductTemplate(catalogProductInfo);
+
+        shadow.appendChild(productTemplateElement.content.cloneNode(true));
+        this.title = shadow.querySelector(".container");
+        
+        const buttonMinus = shadow.querySelector(".decrement-quantity-button");
+        const buttonPlus = shadow.querySelector(".increment-quantity-button");
+        const productQuantity = shadow.querySelector(".product-quantity");
+
+        
+        let itemCount = 1;
 
         function increment(){
             itemCount++;
@@ -166,7 +164,7 @@ class product extends HTMLElement {
                 buttonMinus.removeAttribute('disabled')
             }
             
-            incrementItemCount.innerHTML = itemCount;
+            productQuantity.innerHTML = itemCount;
         }
 
         function decrement(){
@@ -181,19 +179,22 @@ class product extends HTMLElement {
                 buttonMinus.setAttribute('disabled', true)
             }
             
-            incrementItemCount.innerHTML = itemCount;
+            productQuantity.innerHTML = itemCount;
         }
 
+        if(itemCount>=1){
+            buttonMinus.setAttribute('disabled',true)    
+        }
         buttonMinus.addEventListener("click", decrement);
         buttonPlus.addEventListener("click", increment);
     }
 }
 
-customElements.define("product-div", product);
 
+customElements.define("product-div", CatalogProduct);
+const productsContainer= document.querySelector('.products-container');
 
-for(let i=0; i<products.length;i++){
-    let itemCard = doWebComponent(products[i])
-    cardCont.innerHTML += itemCard.innerHTML
-}
-
+catalogProducts.forEach((catalogProduct)=>{
+    const catalogProductElement = new CatalogProduct(catalogProduct);
+    productsContainer.appendChild(catalogProductElement);
+});
